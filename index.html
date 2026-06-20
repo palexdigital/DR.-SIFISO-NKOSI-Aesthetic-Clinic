@@ -36,6 +36,28 @@
     <style>
         html { scroll-behavior: smooth; }
         body { background-color: #FDFBF7; color: #1A1A1A; }
+        
+        /* Premium custom micro-interactions matching your animation intent */
+        .social-btn:hover .phone-icon {
+            transform: rotate(-15deg);
+            transition: transform 0.15s ease-in-out;
+        }
+        .social-btn:hover .x-icon {
+            transform: scale(1.1) rotate(-10deg);
+            transition: transform 0.2s ease-in-out;
+        }
+        .social-btn:hover .ig-body {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-out;
+        }
+        .social-btn:hover .ig-lens {
+            transform: scale(1.2);
+            transition: transform 0.25s ease-out;
+        }
+        .social-btn:hover .tiktok-icon {
+            transform: scale(1.1) translateY(-2px);
+            transition: transform 0.2s ease-out;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-brandGold selection:text-brandCharcoal">
@@ -89,7 +111,7 @@
             </div>
             <div class="lg:col-span-5">
                 <div class="bg-gray-100 relative">
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Dr Sifiso Nkosi Aesthetic Clinic treatment room closeup" class="w-full h-[450px] object-cover grayscale contrast-115">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Dr Sifiso Nkosi Aesthetic Clinic treatment room" class="w-full h-[450px] object-cover grayscale contrast-115">
                 </div>
             </div>
         </div>
@@ -343,9 +365,13 @@
 
                 <div>
                     <h3 class="text-xs uppercase font-bold tracking-widest text-brandCharcoal mb-3">Operating Hours</h3>
-                    <div class="text-xs text-brandMuted space-y-2 border-l border-brandGold pl-4">
-                        <p class="flex justify-between max-w-xs"><span>Monday - Friday:</span> <span class="font-semibold text-brandCharcoal">9 am – 5 pm</span></p>
-                        <p class="flex justify-between max-w-xs"><span>Saturday:</span> <span class="font-semibold text-brandCharcoal">8:30 am – 12 pm</span></p>
+                    <div class="text-xs text-brandMuted space-y-2.5 border-l border-brandGold pl-4">
+                        <p class="flex justify-between max-w-xs"><span>Monday:</span> <span class="font-semibold text-brandCharcoal">9:00 am – 5:00 pm</span></p>
+                        <p class="flex justify-between max-w-xs"><span>Tuesday:</span> <span class="font-semibold text-brandCharcoal">9:00 am – 5:00 pm</span></p>
+                        <p class="flex justify-between max-w-xs"><span>Wednesday:</span> <span class="font-semibold text-brandCharcoal">9:00 am – 5:00 pm</span></p>
+                        <p class="flex justify-between max-w-xs"><span>Thursday:</span> <span class="font-semibold text-brandCharcoal">9:00 am – 5:00 pm</span></p>
+                        <p class="flex justify-between max-w-xs"><span>Friday:</span> <span class="font-semibold text-brandCharcoal">9:00 am – 5:00 pm</span></p>
+                        <p class="flex justify-between max-w-xs"><span>Saturday:</span> <span class="font-semibold text-brandCharcoal">8:30 am – 12:00 pm</span></p>
                         <p class="flex justify-between max-w-xs text-red-700"><span>Sunday:</span> <span class="font-semibold">Closed</span></p>
                     </div>
                 </div>
@@ -353,17 +379,33 @@
                 <div>
                     <h3 class="text-xs uppercase font-bold tracking-widest text-brandCharcoal mb-3">Digital Channels</h3>
                     <div class="flex gap-4">
-                        <a href="https://api.whatsapp.com/message/SISNFT5NQVDEA1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-brandCharcoal hover:text-brandGold hover:border-brandGold flex items-center justify-center transition" title="WhatsApp Chat Desk">
-                            <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <a href="https://api.whatsapp.com/message/SISNFT5NQVDEA1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" class="social-btn w-11 h-11 border border-gray-200 text-brandCharcoal hover:text-brandGold hover:border-brandGold flex items-center justify-center transition bg-brandIvory" title="WhatsApp Chat Desk">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="origin-center">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                                <path class="phone-icon origin-center transition-transform" d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+                            </svg>
                         </a>
-                        <a href="https://www.instagram.com/dr.sifisonkosi_aesthetic/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-brandCharcoal hover:text-brandGold hover:border-brandGold flex items-center justify-center transition" title="Instagram Profile">
-                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        <a href="https://www.instagram.com/dr.sifisonkosi_aesthetic/" target="_blank" rel="noopener noreferrer" class="social-btn w-11 h-11 border border-gray-200 text-brandCharcoal hover:text-brandGold hover:border-brandGold flex items-center justify-center transition bg-brandIvory" title="Instagram Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path class="ig-body origin-center transition-transform" d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                                <path class="ig-lens origin-center transition-transform" d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                                <path d="M16.5 7.5v.01" />
+                            </svg>
                         </a>
-                        <a href="https://twitter.com/DrSifisoNkosi" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-brandCharcoal hover:text-brandGold hover:border-brandGold flex items-center justify-center transition" title="X (Twitter) Profile">
-                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        <a href="https://twitter.com/DrSifisoNkosi" target="_blank" rel="noopener noreferrer" class="social-btn w-11 h-11 border border-gray-200 text-brandCharcoal hover:text-brandGold hover:border-brandGold flex items-center justify-center transition bg-brandIvory" title="X (Twitter) Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <g class="x-icon origin-center transition-transform">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                                </g>
+                            </svg>
                         </a>
-                        <a href="https://www.tiktok.com/@drsifisonkosi_aesthetics" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-gray-300 text-brandCharcoal hover:text-brandGold hover:border-brandGold flex items-center justify-center transition" title="TikTok Channel">
-                            <i data-lucide="video" class="w-4 h-4"></i>
+                        <a href="https://www.tiktok.com/@drsifisonkosi_aesthetics" target="_blank" rel="noopener noreferrer" class="social-btn w-11 h-11 border border-gray-200 text-brandCharcoal hover:text-brandGold hover:border-brandGold flex items-center justify-center transition bg-brandIvory" title="TikTok Channel">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tiktok-icon origin-center transition-transform">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -390,7 +432,9 @@
                     <a href="https://twitter.com/DrSifisoNkosi" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">X (Twitter)</a>
                     <a href="https://www.tiktok.com/@drsifisonkosi_aesthetics" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">TikTok</a>
                 </div>
+                
                 <span class="text-gray-600 hidden sm:inline">|</span>
+                
                 <a href="https://palexdigital.pages.dev/" target="_blank" rel="noopener noreferrer" class="text-brandGold hover:text-white font-medium tracking-wide transition">
                     Developed By paléXdigital
                 </a>
@@ -406,7 +450,6 @@
         document.getElementById('secureAppointmentForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            // Secure user parameter sanitization handling using value properties directly
             const data = {
                 firstName: document.getElementById('firstName').value.trim(),
                 lastName: document.getElementById('lastName').value.trim(),
@@ -418,7 +461,6 @@
                 notes: document.getElementById('bookingNotes').value.trim()
             };
 
-            // Structural human clear formatting validation text block assembly
             let textMessage = `Hello Dr. Sifiso Nkosi Aesthetic Clinic,\n\n`;
             textMessage += `I would like to request an appointment block with the following info:\n\n`;
             textMessage += `• Full Name: ${data.firstName} ${data.lastName}\n`;
@@ -432,11 +474,9 @@
                 textMessage += `• Patient Notes: ${data.notes}\n`;
             }
 
-            // Secure encoding step mapping string straight into target global API URL structure
             const targetBaseURL = "https://api.whatsapp.com/message/SISNFT5NQVDEA1";
             const processedUrl = `${targetBaseURL}?autoload=1&app_absent=0&text=${encodeURIComponent(textMessage)}`;
 
-            // Launch target verification connection action safely in new clean window context
             window.open(processedUrl, '_blank', 'noopener,noreferrer');
         });
     </script>
